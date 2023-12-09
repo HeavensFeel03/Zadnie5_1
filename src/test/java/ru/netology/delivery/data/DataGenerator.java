@@ -10,7 +10,8 @@ import java.util.Locale;
 import java.util.Random;
 
 public class DataGenerator {
-    private DataGenerator() {}
+    private DataGenerator() {
+    }
 
     public static String generateDate(int shift) {
         return LocalDate.now().plusDays(shift).format(DateTimeFormatter.ofPattern("dd.MM.yyyy"));
@@ -32,7 +33,8 @@ public class DataGenerator {
     }
 
     public static class Registration {
-        private Registration() {}
+        private Registration() {
+        }
 
         public static UserInfo generateUser(String locale) {
             return new UserInfo(generateCity(), generateName(locale), generatePhone(locale));
